@@ -1,0 +1,72 @@
+*:root {
+--dark: #6c757d ;
+--white: whitesmoke;
+
+
+}
+
+
+/* Estilos para a barra de menu */
+    .menu-bar {
+      background-color: #343a40;
+      color: #6c757d;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+/* Estilos para os itens do menu */
+    .menu-item {
+      padding: 10px;
+    }
+
+/* Estilos para o menu inferior */
+    .menu-oculto {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: #6c757d;
+      border: 1px solid #343a40;
+      padding: 10px;
+    }
+
+/*Estilo para barra de navegação do menu*/
+.content {
+  max-width: 1000px;
+  min-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  
+}
+
+.nav {
+  width: 100%;
+  height: 125px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--dark);
+  
+}
+
+
+
+.nav a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #00285f83;
+}
+/*Estillização de tabela*/
+.table-hover :hover {
+  color: var(--white);
+  text-align: center;
+  
+}
+
+
