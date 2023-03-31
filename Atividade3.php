@@ -45,7 +45,7 @@ include_once 'webcomplement.html';
             <h1>Faturamento Mensal</h1>
 
             <div class="content ">
-                <table class="table table-hover table-white">
+                <table class="table table-hover table-dark">
 
                     <tr style="color: whitesmoke;">
                         <th>Dia</th>
@@ -111,7 +111,7 @@ include_once 'webcomplement.html';
                     $somaFaturamento = 0;
                     foreach ($faturamentoDiario as $dia => $faturamento) {
                         if ($faturamento > 0) { ?>
-                            <tr style="color: whitesmoke">
+                            <tr >
                                 <td><?php echo $dia; ?></td>
                                 <td><?php echo number_format($faturamento, 2, ',', '.'); ?></td>
                             </tr>
@@ -119,7 +119,7 @@ include_once 'webcomplement.html';
                             $somaFaturamento += $faturamento;
                         }
                     } ?>
-                    <tr style="color: whitesmoke; background-color: black">
+                    <tr style="background-color: black">
                         <td><strong>Total:</strong></td>
                         <td><strong><?php echo number_format($somaFaturamento, 2, ',', '.'); ?></strong></td>
                     </tr>
