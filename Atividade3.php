@@ -100,8 +100,8 @@ include_once 'webcomplement.html';
                         return $valor > 0;
                     });
                     $menorValorDiferenteDeZero = min($valoresDiferentesDeZero);
-                    echo "<p>O menor valor de faturamento ocorrido em um dia do mês foi: R$" . number_format($menorValorDiferenteDeZero, 2, ',', '.') . "</p>";
-                    echo "<p>O maior valor de faturamento ocorrido em um dia do mês foi: R$" . number_format($maiorValor, 2, ',', '.') . "</p>";
+                    echo "<p>O menor valor de faturamento ocorrido em um dia do mês foi: R$ " . number_format($menorValorDiferenteDeZero, 2, ',', '.') . "</p>";
+                    echo "<p>O maior valor de faturamento ocorrido em um dia do mês foi: R$ " . number_format($maiorValor, 2, ',', '.') . "</p>";
                     echo "<p>Número de dias no mês em que o valor de faturamento diário foi superior à média mensal: " . $contadorDiasAcimaMedia . "</p>";
 
 
