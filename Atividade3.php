@@ -41,8 +41,12 @@ include_once 'webcomplement.html';
 
 
         <div class="card bg-dark text-white text-center font-weight-bold">
-            <div class="card-body"><h2>Atividade 3</h2></div>
+            <div class="card-body">
+                <h2>Atividade 3</h2>
+                
+            </div>
             <h1>Faturamento Mensal</h1>
+
 
             <div class="content ">
                 <table class="table table-hover table-dark">
@@ -111,7 +115,7 @@ include_once 'webcomplement.html';
                     $somaFaturamento = 0;
                     foreach ($faturamentoDiario as $dia => $faturamento) {
                         if ($faturamento > 0) { ?>
-                            <tr >
+                            <tr>
                                 <td><?php echo $dia; ?></td>
                                 <td>R$ <?php echo number_format($faturamento, 2, ',', '.'); ?></td>
                             </tr>
@@ -125,7 +129,13 @@ include_once 'webcomplement.html';
                     </tr>
                     </tbody>
                 </table>
+                <br>
+
+                 <i>Fonte de Dados: Os dados foram estraídos do arquivo dados.json</i>
+                 <br>
             </div>
+
+            <br><br>
 
 </body>
 
