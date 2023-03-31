@@ -63,10 +63,17 @@
   color: #00285f83;
 }
 /*Estillização de tabela*/
-.table-hover :hover {
-  color: var(--white);
-  text-align: center;
-  
+.table-hover tbody tr:hover {
+  font-weight: bold;
+  color: white;
+  background-color: #1567b8;
+}
+
+/* Alteração da legenda do gráfico */
+.card-p {
+  background-color: #36520380;
+  font-weight: bold;
+  color: white;
 }
 
 

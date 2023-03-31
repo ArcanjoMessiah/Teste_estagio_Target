@@ -64,7 +64,7 @@ include_once 'webcomplement.html';
                 }
 
                 // Exibe os valores e as porcentagens em uma tabela
-                echo "<table class='table table-hover table-white'>";
+                echo "<table class='table table-hover table-dark'>";
                 echo "<thead style='color: whitesmoke'><tr><th>Categoria</th><th>Valor</th><th>Porcentagem</th></tr></thead>";
                 echo "<tbody style='color: whitesmoke'>";
                 foreach ($faturamentoMensal as $categoria => $faturamento) {
@@ -77,45 +77,55 @@ include_once 'webcomplement.html';
 
                 // Exibe o gráfico de pizza
                 ?>
-                <canvas id="myChart"></canvas>
 
-                <!-- Script para gerar o gráfico -->
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                <script>
-                    var ctx = document.getElementById('myChart').getContext('2d');
-                    var myChart = new Chart(ctx, {
-                        type: 'pie',
-                        data: {
-                            labels: <?php echo json_encode(array_keys($faturamentoMensal)); ?>,
-                            datasets: [{
-                                data: <?php echo json_encode(array_values($porcentagens)); ?>,
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255, 99, 132, 1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            plugins: {
-                                legend: {
-                                    position: 'bottom',
+                <div class="card-footer bg text-center font-weight-bold">
+                    <canvas id="myChart"></canvas>
+
+                    <!-- Script para gerar o gráfico -->
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <script>
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var myChart = new Chart(ctx, {
+                            type: 'pie',
+                            data: {
+                                labels: <?php echo json_encode(array_keys($faturamentoMensal)); ?>,
+                                datasets: [{
+                                    data: <?php echo json_encode(array_values($porcentagens)); ?>,
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.5)',
+                                        'rgba(54, 162, 235, 0.5)',
+                                        'rgba(255, 206, 86, 0.5)',
+                                        'rgba(75, 192, 192, 0.5)',
+                                        'rgba(153, 102, 255, 0.5)'
+                                    ],
+                                    borderColor: [
+                                        'rgba(255, 99, 132, 1)',
+                                        'rgba(54, 162, 235, 1)',
+                                        'rgba(255, 206, 86, 1)',
+                                        'rgba(75, 192, 192, 1)',
+                                        'rgba(153, 102, 255, 1)'
+                                    ],
+                                    borderWidth: 2
+                                }]
+                            },
+
+                            options: {
+                                responsive: true,
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            fontColor: 'white'
+                                        },
+                                        display: true,
+                                        position: 'bottom',
+                                        backgroundColor: 'gray',
+                                        padding: 10
+                                    }
                                 }
                             }
-                        }
-                    });
-                </script>
+                        });
+                    </script>
+                </div>
 
 
             </div>
