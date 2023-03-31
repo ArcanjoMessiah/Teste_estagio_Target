@@ -113,7 +113,7 @@ include_once 'webcomplement.html';
                         if ($faturamento > 0) { ?>
                             <tr >
                                 <td><?php echo $dia; ?></td>
-                                <td><?php echo number_format($faturamento, 2, ',', '.'); ?></td>
+                                <td>R$ <?php echo number_format($faturamento, 2, ',', '.'); ?></td>
                             </tr>
                     <?php
                             $somaFaturamento += $faturamento;
@@ -121,7 +121,7 @@ include_once 'webcomplement.html';
                     } ?>
                     <tr style="background-color: black">
                         <td><strong>Total:</strong></td>
-                        <td><strong><?php echo number_format($somaFaturamento, 2, ',', '.'); ?></strong></td>
+                        <td><strong>R$ <?php echo number_format($somaFaturamento, 2, ',', '.'); ?></strong></td>
                     </tr>
                     </tbody>
                 </table>
